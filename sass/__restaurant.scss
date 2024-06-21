@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  height: 60px;
+  font-family: "Shrikhand", "cursive";
+
+  &--withBackArrow {
+    .header__arrow {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .restaurantContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header__logo {
+    text-align: center;
+    flex-grow: 1;
+  }
+}
