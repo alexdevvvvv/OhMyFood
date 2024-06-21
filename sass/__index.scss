@@ -12,3 +12,152 @@
   margin: 0;
   text-align: center;
 }
+
+/* Emplacement */
+
+.emplacement {
+  display: flex;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  background-color: #eaeaea;
+  font-size: 1rem;
+  position: relative;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  font-family: "Roboto", sans-serif;
+
+  &__icone {
+    margin-right: 1rem;
+  }
+
+  &__texte {
+    font-weight: 500;
+  }
+}
+
+/* Booking */
+
+.booking {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(246, 246, 246, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.125rem;
+    margin: 1.5rem 0;
+  }
+
+  &__link {
+    border: 0;
+    padding: 0.95rem 1.35rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(104, 104, 104);
+    background-image: linear-gradient(
+      0deg,
+      rgba(147, 86, 220, 0.9) 0%,
+      rgba(255, 121, 218, 0.9) 100%
+    );
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &__link:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__link a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* Processus */
+/*************************** Processus ***************************/
+.processus {
+  padding: 2.5rem 1rem;
+
+  &__titre {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &__etapes {
+    margin: 0;
+    padding: 3rem 2rem;
+    list-style: none;
+    counter-reset: stepCounter;
+    font-family: "Roboto", sans-serif;
+
+    @media (min-width: 1024px) {
+      display: flex;
+    }
+  }
+
+  &__etape {
+    padding: 1.25rem;
+    margin: 1rem 0 1rem 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      flex: 1;
+      margin: 0;
+      margin-left: 1.5rem;
+
+      &:first-child {
+        margin-left: 0.75rem;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      counter-increment: stepCounter 1;
+      content: counter(stepCounter) " ";
+      background: rgba(147, 86, 220, 0.9);
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: absolute;
+      left: -0.75rem;
+    }
+  }
+
+  &__icone {
+    margin-right: 1rem;
+    color: rgba(126, 126, 126, 1);
+  }
+
+  &__etape,
+  :hover {
+    color: rgba(147, 86, 220, 0.9);
+    transition: color 1s ease;
+  }
+}
