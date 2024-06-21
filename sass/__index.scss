@@ -124,7 +124,7 @@
     &::before {
       counter-increment: stepCounter 1;
       content: counter(stepCounter) " ";
-      background: $color-background-badge;
+      background: $color-background-link;
       height: 1.5rem;
       width: 1.5rem;
       border-radius: 100px;
@@ -139,12 +139,12 @@
 
   &__icone {
     margin-right: 1rem;
-    color: $color-text-badge;
+    color: $color-background-link;
   }
 
   &__etape,
   :hover {
-    color: $color-text-badge;
+    color: $color-background-link;
     transition: color 1s ease;
   }
 }
