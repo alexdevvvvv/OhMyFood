@@ -141,4 +141,79 @@
   transition: color 1s ease;
 }
 
+/* selection restaurants */
+.restaurants {
+  background-color: rgb(243, 243, 243);
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.restaurants__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card__img {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+.card__badge {
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.card__box {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
+}
+.card__title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.card__subtitle {
+  margin: 0;
+}
+.card__btn {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*# sourceMappingURL=style.css.map */
