@@ -1,0 +1,58 @@
+.site-footer {
+  background-color: #353535;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
+    flex: left;
+
+    @media (min-width: 1024px) {
+      align-items: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+    }
+  }
+
+  &__logo {
+    color: white;
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 0.5rem 0;
+  }
+
+  &__item:first-child {
+    margin-top: 0;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__icon {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}

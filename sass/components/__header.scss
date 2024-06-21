@@ -1,0 +1,17 @@
+/* header */
+
+.omf-header {
+  padding: 1rem 1rem;
+  box-shadow: 0 0 0.5rem $color-shadow-header;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.omf-logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0 auto;
+  text-align: center;
+}

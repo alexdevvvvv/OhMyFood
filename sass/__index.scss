@@ -1,17 +1,4 @@
-/* header */
-
-.omf-header {
-  padding: 1rem 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 10;
-}
-
-.omf-logo {
-  font-family: "Shrikhand", "cursive";
-  margin: 0;
-  text-align: center;
-}
+@import "./__variables.scss";
 
 /* Emplacement */
 
@@ -19,10 +6,10 @@
   display: flex;
   justify-content: center;
   padding: 0.85rem 1rem;
-  background-color: #eaeaea;
+  background-color: $color-background-emplacement;
   font-size: 1rem;
   position: relative;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 0.5rem $color-shadow-emplacement;
   font-family: "Roboto", sans-serif;
 
   &__icone {
@@ -39,7 +26,7 @@
 .booking {
   padding: 2rem;
   text-align: center;
-  background-color: rgba(246, 246, 246, 1);
+  background-color: $color-background-booking;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,20 +49,20 @@
     font-size: 1rem;
     border-radius: 50px;
     color: white;
-    background-color: rgb(104, 104, 104);
+    background-color: $color-background-link;
     background-image: linear-gradient(
       0deg,
-      rgba(147, 86, 220, 0.9) 0%,
-      rgba(255, 121, 218, 0.9) 100%
+      $color-gradient-link-start 0%,
+      $color-gradient-link-end 100%
     );
     cursor: pointer;
     transition-duration: 0.25s;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.25rem 0.25rem 10px $color-shadow-link;
   }
 
   &__link:hover {
-    background-color: white;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    background-color: $color-background-link-hover;
+    box-shadow: 0.25rem 0.25rem 10px $color-shadow-link-hover;
   }
 
   &__link a {
@@ -85,7 +72,7 @@
 }
 
 /* Processus */
-/*************************** Processus ***************************/
+
 .processus {
   padding: 2.5rem 1rem;
 
@@ -112,7 +99,7 @@
     margin: 1rem 0 1rem 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $color-background-processus-step;
     display: flex;
     position: relative;
 
@@ -137,7 +124,7 @@
     &::before {
       counter-increment: stepCounter 1;
       content: counter(stepCounter) " ";
-      background: rgba(147, 86, 220, 0.9);
+      background: $color-background-badge;
       height: 1.5rem;
       width: 1.5rem;
       border-radius: 100px;
@@ -152,12 +139,12 @@
 
   &__icone {
     margin-right: 1rem;
-    color: rgba(126, 126, 126, 1);
+    color: $color-text-badge;
   }
 
   &__etape,
   :hover {
-    color: rgba(147, 86, 220, 0.9);
+    color: $color-text-badge;
     transition: color 1s ease;
   }
 }
@@ -165,7 +152,7 @@
 /* selection restaurants */
 
 .restaurants {
-  background-color: rgba(243, 243, 243, 1);
+  background-color: $color-background-restaurants;
   padding: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -181,7 +168,7 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: $color-background-card;
   border-radius: 10px;
   position: relative;
   text-decoration: none;
@@ -196,8 +183,8 @@
   }
 
   &__badge {
-    background-color: rgba(153, 226, 208, 1);
-    color: rgba(0, 135, 102, 1);
+    background-color: $color-background-badge;
+    color: $color-text-badge;
     padding: 8px;
     border-radius: 2px;
     position: absolute;
